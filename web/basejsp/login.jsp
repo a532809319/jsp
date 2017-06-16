@@ -38,6 +38,7 @@
        <%
        response.sendRedirect("cookie1.jsp");
        %>
+
    </form>
 </body>
 </html>

@@ -1,22 +1,37 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hukai
-  Date: 2017/6/15
-  Time: 上午10:08
-  To change this template use File | Settings | File Templates.
---%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="Pag" value="Page Value" scope="page" />
-<c:set var="Req" value="Request Value" scope="request" />
-<c:set var="Ses" value="Session Value" scope="session" />
-<c:set var="App" value="Application Value" scope="application" />
-<html>
+<%@ page import="com.po.Users" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+
+%>
+<%%>
+<%%>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
 <body>
-<h2>JSP对象范围示例一：</h2>
-<b>Page Scope</b> ::<c:out value="${Pag}" /><br>
-<b>Request Scope</b> ::<c:out value="${Req}" /><br>
-<b>Session Scope</b> ::<c:out value="${Ses}" /><br>
-<b>Application Scope</b>::<c:out value="${App}" /><br>
-<a href="scope2.jsp">下一页Session,Application范围</a>
+      <h1>
+          使用普通方式。
+      </h1>
+      <%
+          Users user= new Users();
+          user.setUseName("admin");
+          user.setPassword("123");
+      %>
+     用户名：
+      <%=
+      user.getUseName()
+      %>
+     密码：
+      <%=
+      user.getPassword()
+      %>
+      <br>
+      <br>
 </body>
 </html>
